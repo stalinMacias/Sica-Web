@@ -1,0 +1,11 @@
+:root {
+  /* Global constants */
+  --font: sans-serif;
+
+  /* Color constants */
+  --background-dark: #ececec;
+}
+
+* {
+  font-family: var(--font);
+}
