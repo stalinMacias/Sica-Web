@@ -4,6 +4,8 @@
 
   /* Color constants */
   --background-dark: #ececec;
+  --emphasis: blueviolet;
+  --error: red;
 }
 
 * {
