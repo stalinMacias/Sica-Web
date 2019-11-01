@@ -39,15 +39,6 @@ class Form extends FormValidation {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        {/*  
-          <input
-            type="email"
-            name="email"
-            placeholder="Type your Email"
-            value={this.state.email}
-            onChange={this.handleOnChange}
-          ></input>
-          */}
         <Input
           type="email"
           name="email"
@@ -57,38 +48,26 @@ class Form extends FormValidation {
           onChange={this.handleOnChange}
           error={this.state.errors.email}
         ></Input>
-        {/** 
-          {this.state.errors.email && (
-            <p className={styles.inputError}>{this.state.errors.email}</p>
-          )}
-          */}
 
-        <div className={styles.formGroup}>
-          <input
-            type="password"
-            name="password"
-            placeholder="Type your Password"
-            value={this.state.password}
-            onChange={this.handleOnChange}
-          ></input>
-          {this.state.errors.password && (
-            <p className={styles.inputError}>{this.state.errors.password}</p>
-          )}
-        </div>
-        <div className={styles.formGroup}>
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm your Password"
-            value={this.state.confirmPassword}
-            onChange={this.handleOnChange}
-          ></input>
-          {this.state.errors.confirmPassword && (
-            <p className={styles.inputError}>
-              {this.state.errors.confirmPassword}
-            </p>
-          )}
-        </div>
+        <Input
+          type="password"
+          name="password"
+          placeholder="Type your Password"
+          label="password"
+          value={this.state.password}
+          onChange={this.handleOnChange}
+          error={this.state.errors.password}
+        ></Input>
+
+        <Input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm your Password"
+          label="confirmPassword"
+          value={this.state.confirmPassword}
+          onChange={this.handleOnChange}
+          error={this.state.errors.confirmPassword}
+        ></Input>
 
         <button className={styles.btn} type="submit">
           Sign Up
